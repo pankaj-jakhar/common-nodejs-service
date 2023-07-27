@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "13bd1137-0299-4b3b-8c11-6830ade694fd",
+		"name": "SMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27823833"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5001/send_otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"8952816868\",\n    \"template_id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/send_otp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"send_otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5001/sms_template",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"otp_template_new\",\n    \"message\": \"Hi there this is your {{otp}}\",\n    \"status\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/sms_template",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"sms_template"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5001/resend_otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"8952816869\",\n    \"template_id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/resend_otp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"resend_otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5001/verify_otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"8952816868\",\n    \"otp\": 948558\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/verify_otp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"verify_otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5001/send_sms",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"8952816868\",\n    \"template_id\": 3,\n    \"values\":{\n        \"name\":\"pankaj\",\n        \"message\":\"good\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/send_sms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"send_sms"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
