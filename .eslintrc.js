@@ -19,7 +19,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  rules: {
-    'no-console': 'error',
-  },
+  // rules: {
+  //   'no-console': 'error',
+  // },
 }

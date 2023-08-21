@@ -2,12 +2,15 @@ const bodyParser = require("body-parser")
 const { PORT } = require("./constants")
 const express = require('express')
 const { router } = require("./routes")
+const cors = require("./middleware/cors")
 const app = express()
 
 
 app.use(bodyParser.json())
+app.use(cors)
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/', router)
+
 
 
 
